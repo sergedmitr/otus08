@@ -46,6 +46,7 @@ SAGA - то есть мы совершаем законченные отдель
 15. ТО Добавляем на склад 1 единицу товара. (T Add Rest Again Warehouse k8s)
 16. Обрабатываем заказ 2 с ошибкой "Временной слот доставки уже занят" (Process Order 2 k8s Fail Delivery)
 17. ТО Проверяем, что у клиента по-прежнему 350 руб на счете (T Check 2 Rests Payments k8s 350)
+![Коллекция postman](Postman-Saga.png)
 
 ## Процесс выполнения:
 1. Создал неймспейс zipper
@@ -83,6 +84,5 @@ kubectl port-forward --namespace zipper svc/delivery-service 8030:8030 --address
 ```shell
 newman run Otus-Saga-k8s.json --verbose
 ```
-![Коллекция postman](Postman-Saga.png)
 
 Всё.
